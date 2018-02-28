@@ -1,0 +1,275 @@
+body {
+  /* width: 1400px; */
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+}
+
+header {
+  background: url(../img/first-bg.jpg) no-repeat top;
+  height: 80vh;
+  margin-bottom: 100px;
+  padding-top: 55px;
+}
+
+.container {
+  width: 920px;
+  margin: 0 auto;
+}
+
+/* menu */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  }
+
+.main-nav-item {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  list-style: none;
+}
+
+.main-nav-item>li {
+  position: relative; /* для иконок */
+  border-right: 1px solid #201f21;
+  border-bottom: 2px solid #b1c625;
+}
+
+.main-nav-item>li>a i.fas {
+  position: absolute; /* для иконок */
+  top: 20px;
+  left: 5px;
+  font-size: 16px;
+}
+
+.main-nav-item>li a {
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+  padding: 15px 30px;
+  background-color: #353437;
+  transition: all 0.3s ease;
+}
+.main-nav-item>li:last-child {
+  border-right: 1px solid #726f62;
+}
+
+.main-nav-item>li:first-child {
+  border-left: 1px solid #726f62;
+}
+
+.main-nav-item>li a:hover {
+  background: #fed136;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+/*sub-menu*/
+.main-nav-item li ul {
+  position: absolute;
+  list-style: none;
+  right: 0;
+  display: none;
+  min-width: 140px;
+}
+
+.main-nav-item li> ul li a {
+  padding: 5px;
+  text-transform: none;
+  list-style: none;
+  background: #474443;
+  border: 1px solid #000000;
+}
+
+.main-nav-item li>ul li ul {
+  position: absolute;
+  right: -140px;
+  top: 65px;
+}
+
+.main-nav-item li:hover> ul {
+  display: block;
+}
+
+/* заголовок */
+
+.main-title {
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  margin-top: 200px;
+  padding: 20px;
+}
+
+.main-title p {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.main-title h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 75px;
+}
+/* кнопка */
+.btn {
+  background-color: #fed136;
+  display: block;
+  width: 230px;
+  text-align: center;
+  vertical-align: top;
+  padding: 25px 50px;
+  margin:0 auto;
+  margin-top: 60px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #8f7c3e;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #941d1d;
+  color: ##030400;
+}
+/* секция services */
+
+.services {
+  color: #000000;
+  text-align: center;
+}
+
+.descriptions {
+  margin-bottom: 75px;
+}
+
+.descriptions h2 {
+  font-size: 40px;
+  font-weight: bold;
+  /* color: #000000; */
+}
+
+.descriptions p {
+  font-size: 14px;
+  /* color: #000000; */
+}
+
+.title-sevices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-item {
+  width: 250px;
+}
+
+.title-item p {
+  text-align: center;
+  line-height: 24px;
+  /* color: #000000; */
+}
+
+/* секция portfolio */
+
+.portfolio {
+  color: #000000;
+  text-align: center;
+  margin-top: 230px;
+  background: #f7f7f7;
+}
+
+.picture {
+  display: flex;
+  justify-content: space-between;
+}
+figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+figure img {
+  display: block;
+  width: 100%;
+  transition: 0.5s;
+}
+figcaption {
+  box-sizing:border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(143,124,62,0.9);
+  padding: 10px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+figure:hover img {
+  transform: scale(1.1);
+}
+/* секция about us */
+
+.about-us {
+  margin-top: 230px;
+  color: #000000;
+  text-align: center;
+}
+
+/* подвал */
+.main-footer {
+  margin-top: 75px;
+  color: #555555;
+  text-align: center;
+}
+
+/* *{box-sizing:border-box; margin: 0;}
+html, body {height: 100%}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure {
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+figure img {
+  display: block;
+  width: 100%;
+  transition: 500ms;
+}
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,.8);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 500ms;
+}
+figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+figure:hover img {
+  transform: scale(1.1);
+} */

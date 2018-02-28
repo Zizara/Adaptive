@@ -1,0 +1,67 @@
+.main-nav-item  [type="checkbox"],
+.main-nav-item label.toggleSubMenu {
+  display: none;
+  }
+  .main-nav-item label {
+    text-decoration: none;
+    display: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 15px 30px;
+    background-color: #353437;
+    border-bottom: 2px solid #b1c625;
+    transition: all 0.3s ease;
+    position: relative; /* для иконок */
+  }
+  .main-nav-item .toggleMenu .fas {
+    position: absolute; /* для иконок */
+    top: 20px;
+    left: 5px;
+    font-size: 16px;
+  }
+  .main-nav-item .toggleMenu:hover {
+    background: #fed136;
+    color: #000000;
+    transition: all 0.3s ease;
+  }
+
+@media all and (max-width: 900px) {
+  /* header {
+    background:#333632
+  } */
+  .main-title {
+    display: none;
+  }
+  .main-nav img {
+    display: none;
+  }
+  .main-nav-item {
+    display: block;
+    max-width:500px;
+    margin: auto;
+  }
+  .main-nav-item li:hover>ul {
+    display: none;
+  }
+  .main-nav-item li {
+    border-bottom: 2px solid #b1c625;
+  }
+  .main-nav-item label.toggleMenu {
+    display: block;
+    }
+
+  input.toggleSubMenu:checked ~ ul {
+    display: block;
+    position: relative;
+  }
+
+  .main-nav-item label.toggleSubMenu {
+    /* position: absolute; */
+    top: auto;
+    left: auto;
+    /* width: 500px;
+    height: 100%; */
+    display: block;
+    border: none;
+    }
+}
