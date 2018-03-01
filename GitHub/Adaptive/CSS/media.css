@@ -1,67 +1,107 @@
-.main-nav-item  [type="checkbox"],
-.main-nav-item label.toggleSubMenu {
+.main-nav  [type="checkbox"],
+.main-nav label.toggleSubMenu {
   display: none;
   }
-  .main-nav-item label {
+
+/*новая кнопка "меню" */
+
+  .main-nav>label {
     text-decoration: none;
     display: none;
     color: #ffffff;
     cursor: pointer;
     padding: 15px 30px;
-    background-color: #353437;
+    text-transform: uppercase;
     border-bottom: 2px solid #b1c625;
     transition: all 0.3s ease;
     position: relative; /* для иконок */
   }
-  .main-nav-item .toggleMenu .fas {
+  .main-nav label .fas {
     position: absolute; /* для иконок */
     top: 20px;
     left: 5px;
     font-size: 16px;
   }
-  .main-nav-item .toggleMenu:hover {
+  .main-nav .toggleMenu:hover {
     background: #fed136;
     color: #000000;
     transition: all 0.3s ease;
   }
 
 @media all and (max-width: 900px) {
-  /* header {
-    background:#333632
-  } */
+  header {
+    background:#2d3038;
+    padding-top: 5px;
+  }
+
   .main-title {
     display: none;
   }
+
   .main-nav img {
     display: none;
   }
-  .main-nav-item {
+
+  .main-nav {
     display: block;
-    max-width:500px;
+    max-width:600px;
     margin: auto;
   }
-  .main-nav-item li:hover>ul {
+
+  .main-nav ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav-item li:hover> ul {
     display: none;
   }
-  .main-nav-item li {
-    border-bottom: 2px solid #b1c625;
-  }
-  .main-nav-item label.toggleMenu {
-    display: block;
-    }
 
-  input.toggleSubMenu:checked ~ ul {
+  .main-nav label {
+    display: block;
+  }
+
+  input.toggleMenu:checked + label.toggleMenu {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  input.toggleMenu:checked ~ ul,
+  input.toggleSubMenu:checked ~ ul  {
     display: block;
     position: relative;
   }
 
-  .main-nav-item label.toggleSubMenu {
-    /* position: absolute; */
-    top: auto;
-    left: auto;
-    /* width: 500px;
-    height: 100%; */
+  .main-nav label.toggleSubMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
     display: block;
-    border: none;
-    }
+  }
+
+  input.toggleSubMenu:checked ~ a {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .main-nav label.toggleSubMenu .fa-caret-down::before {
+    content: "\f0d7";
+    color: #000000;
+    font-size: 18px;
+  }
+
+  .main-nav label.toggleSubMenu .fa-caret-down {
+    position: absolute;
+    top: 20px;
+    left: 560px;
+  }
+
+  .main-nav input.toggleSubMenu:checked ~ label.toggleSubMenu .fa-caret-down::before {
+    content: "\f0d8";
+    color: #ffffff;
+    font-size: 18px;
+  }
 }

@@ -40,6 +40,7 @@ header {
 .main-nav-item>li {
   position: relative; /* для иконок */
   border-right: 1px solid #201f21;
+  border-left:  1px solid #201f21;
   border-bottom: 2px solid #b1c625;
 }
 
@@ -57,9 +58,6 @@ header {
   padding: 15px 30px;
   background-color: #353437;
   transition: all 0.3s ease;
-}
-.main-nav-item>li:last-child {
-  border-right: 1px solid #726f62;
 }
 
 .main-nav-item>li:first-child {
@@ -81,7 +79,7 @@ header {
   min-width: 140px;
 }
 
-.main-nav-item li> ul li a {
+.main-nav-item li>ul li a {
   padding: 5px;
   text-transform: none;
   list-style: none;
