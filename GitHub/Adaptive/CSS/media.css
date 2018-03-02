@@ -29,18 +29,24 @@
   }
 
 @media all and (max-width: 900px) {
+
+  /*Убрать фон, меню выше*/
+
   header {
     background:#2d3038;
     padding-top: 5px;
   }
+  /*скрыть заголовок*/
 
   .main-title {
     display: none;
   }
-
+  /*скрыть логотип*/
   .main-nav img {
     display: none;
   }
+
+  /*меню */
 
   .main-nav {
     display: block;
@@ -61,11 +67,13 @@
   .main-nav label {
     display: block;
   }
+  /*при нажатии меню цвет на черный */
 
   input.toggleMenu:checked + label.toggleMenu {
     background: #000000;
     color: #ffffff;
   }
+  /*при нажатии появляется список */
 
   input.toggleMenu:checked ~ ul,
   input.toggleSubMenu:checked ~ ul  {
@@ -86,7 +94,8 @@
     background: #000000;
     color: #ffffff;
   }
-
+  /*треугольник псевдоэлемент */
+  
   .main-nav label.toggleSubMenu .fa-caret-down::before {
     content: "\f0d7";
     color: #000000;
