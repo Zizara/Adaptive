@@ -63,7 +63,7 @@ header {
   font-size: 18px;
 }
 
-.main-nav-item>li>a:hover i.fa::before {
+.main-nav-item>li:hover i.fa::before {
   color: #000000;
   }
 
@@ -73,7 +73,7 @@ header {
   position: relative;
 }
 
-/*анимирование стрелочки*/
+/*анимирование стрелочки sub-menu*/
 
 .main-nav-item>li>ul>li>a i.fa-angle-right {
   position: absolute;
@@ -141,7 +141,7 @@ header {
   display: inline-block;
   text-align: center;
   margin: 0;
-  margin-top: 200px;
+  margin-top: 180px;
   padding: 20px;
 }
 
