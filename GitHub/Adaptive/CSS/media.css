@@ -121,7 +121,23 @@
     color: #ffffff;
   }
   /* секция сервис*/
-  .descriptions {
+  .services .mobil {
     margin-top: 300px;
+  }
+
+.descriptions,
+.portfolio,
+.about-us {
+  margin-top: 100px;
+}
+
+  .title-sevices,
+  .picture  {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  figure {
+    margin-bottom: 20px;
   }
 }
