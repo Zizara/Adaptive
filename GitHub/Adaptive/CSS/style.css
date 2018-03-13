@@ -158,10 +158,10 @@ header {
   font-size: 75px;
 }
 /* кнопка */
-.btn {
+.btn-login {
   background-color: #fed136;
   display: block;
-  width: 230px;
+  max-width: 230px;
   text-align: center;
   vertical-align: top;
   padding: 25px 50px;
@@ -174,7 +174,7 @@ header {
   font-weight: bold;
 }
 
-.btn:hover {
+.btn-login:hover {
   background-color: #941d1d;
   color: ##030400;
 }
@@ -273,39 +273,81 @@ figure:hover img {
   text-align: center;
 }
 
-/* *{box-sizing:border-box; margin: 0;}
-html, body {height: 100%}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-figure {
-  width: 500px;
-  position: relative;
-  overflow: hidden;
-}
-figure img {
-  display: block;
-  width: 100%;
-  transition: 500ms;
-}
-figcaption {
-  position: absolute;
-  bottom: 0;
+/* PopUp */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
+  top: 0;
   width: 100%;
-  background: rgba(255,255,255,.8);
-  padding: 20px;
+  height: 100%;
+  overflow: auto;   /*включает прокрутку елси необходимо?? */
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 60px;
+  color: #000000;
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal-content {
+  /* position: fixed;
+  display: block;
+  top: 100px;
+  left: 50%;
+  margin-left: -250px; */
+  margin: 5% auto 15% auto;
+  width: 50%;
+  /* padding: 10px 15px; */
+  background: #d7e8c3;
+  border: 1px solid #b1b7e0;
+}
+
+.img-container {
   text-align: center;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: 500ms;
+  margin: 24px 0 12px 0;
 }
-figure:hover figcaption {
-  opacity: 1;
-  transform: translateY(0);
+
+.img-container img {
+  border-radius: 50%;
+  width: 40%;
 }
-figure:hover img {
-  transform: scale(1.1);
-} */
+
+.container-form {
+  padding: 16px;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #249c6e;
+}
+
+button.btn-login-form {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  background-color: #6d8fa4;
+  font-weight: bold;
+}
+
+button.btn-login-form:hover {
+opacity: 0.8;
+}
+
+.footer-form {
+  display: flex;
+  background-color: #c4ebdd;
+  justify-content: space-between;
+}
+
+.btn-cnl-form {
+
+}
