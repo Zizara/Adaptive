@@ -56,10 +56,12 @@
       <div class="main-title">
         <p>Welcome to our studio!</p>
         <h1>it's nice to meet you</h1>
+        <div class="main-btn-login">
+          <a class="btn-login" href="#">Login</a>
+        </div>
       </div>
-        <a class="btn-login" href="#">Login</a>
     </div>
-  </header>
+    </header>
   <main>
     <section class="services">
       <div class="container">
@@ -151,7 +153,8 @@
   <div class="modal">
     <form class="modal-content" action="index.html" method="post">
       <div class="img-container">
-        <img src="img/avatar.png" alt="">
+        <button class="close-form" type="button" name="button"></button>
+        <img src="img/avatar.png" alt="avatar">
       </div>
       <div class="container-form">
         <label for="login"><b>Username</b></label>
@@ -175,6 +178,7 @@
     var link = document.querySelector(".btn-login");
     var popup = document.querySelector(".modal");
     var close = document.querySelector(".btn-cnl-form");
+    var close1 = document.querySelector(".close-form");
 
     link.addEventListener("click", function(event) {
       event.preventDefault();
@@ -182,6 +186,11 @@
     });
 
     close.addEventListener("click", function(event) {
+      event.preventDefault();
+    popup.classList.remove("modal-show");
+  });
+
+    close1.addEventListener("click", function(event) {
       event.preventDefault();
     popup.classList.remove("modal-show");
   });

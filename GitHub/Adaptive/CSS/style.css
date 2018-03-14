@@ -284,7 +284,7 @@ figure:hover img {
   height: 100%;
   overflow: auto;   /*включает прокрутку елси необходимо?? */
   background-color: rgba(0,0,0,0.6);
-  padding-top: 60px;
+  /* padding-top: 50px; */
   color: #000000;
 }
 
@@ -298,7 +298,7 @@ figure:hover img {
   top: 100px;
   left: 50%;
   margin-left: -250px; */
-  margin: 5% auto 15% auto;
+  margin: 5% auto 5% auto;
   width: 50%;
   /* padding: 10px 15px; */
   background: #d7e8c3;
@@ -306,6 +306,7 @@ figure:hover img {
 }
 
 .img-container {
+  position: relative;
   text-align: center;
   margin: 24px 0 12px 0;
 }
@@ -327,7 +328,7 @@ input[type=password] {
   margin: 8px 0;
   border: 1px solid #249c6e;
 }
-
+/* Кнопка "логин"*/
 button.btn-login-form {
   width: 100%;
   padding: 14px 20px;
@@ -347,7 +348,62 @@ opacity: 0.8;
   background-color: #c4ebdd;
   justify-content: space-between;
 }
-
+/* Кнопка "отмена"*/
 .btn-cnl-form {
+  width: auto;
+  padding: 14px 20px;
+  background-color: #d01919;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
 
+.btn-cnl-form:hover {
+  opacity: 0.8;
+}
+
+.footer-form a {
+  color: #000000;
+}
+/* Кнопка отмена (Х)*/
+.close-form {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+  font-size: 0;
+  border: 0;
+}
+
+.close-form::after {
+  position: absolute;
+  content: "";
+  background-color: #1a1818;
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 4px;
+}
+
+.close-form::before {
+  position: absolute;
+  content: "";
+  background-color: #1a1818;
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 4px;
+}
+
+.close-form::after {
+  transform: rotate(45deg);
+}
+
+.close-form::before {
+  transform: rotate(-45deg);
+}
+
+.close-form:hover::after,
+.close-form:hover::before {
+  background-color: red;
 }
