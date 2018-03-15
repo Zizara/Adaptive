@@ -155,3 +155,12 @@
     margin-bottom: 20px;
   }
 }
+
+@media all and (max-width: 400px) {
+  .footer-form {
+    flex-direction: column;
+  }
+  .footer-form a {
+    margin-top: 10px;
+  }
+}
