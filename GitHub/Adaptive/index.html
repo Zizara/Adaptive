@@ -154,17 +154,19 @@
   <div class="modal ">
     <form class="modal-content animate" action="index.html" method="post">
       <div class="img-container">
-        <button class="close-form" type="button" name="button"></button>
+        <button class="close-form" type="button" name="cross"></button>
         <img src="img/avatar.png" alt="avatar">
       </div>
       <div class="container-form">
         <label for="login"><b>Username</b></label>
         <i class="fas fa-user"></i>
-        <input id="login" class="login-user" type="text" name="login" placeholder="Enter your name">
+        <input id="login" class="login-user" type="text" name="login"
+         placeholder="Enter your name" required>
 
         <label for="psw"><b>password</b></label>
         <i class="fas fa-lock"></i>
-        <input id="psw"class="password-user" type="password" name="psw" placeholder="Enter your password">
+        <input id="psw"class="password-user" type="password" name="password"
+        placeholder="Enter your password" required>
 
         <button class="btn-login-form" type="submit" name="button">Login</button>
         <label for="rmb">
@@ -180,22 +182,36 @@
   <script>
     var link = document.querySelector(".btn-login");
     var popup = document.querySelector(".modal");
-    var close = document.querySelector(".btn-cnl-form");
-    var close1 = document.querySelector(".close-form");
+    var close = popup.querySelector(".btn-cnl-form");
+    var close1 = popup.querySelector(".close-form");
 
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-    popup.classList.add("modal-show");
+
+
+    link.addEventListener("click", function(event) { //поиск клика
+      event.preventDefault(); //отмена действие по умолчанию
+      popup.classList.add("modal-show"); //добавить класс .modal-show
+      login.focus();
     });
 
     close.addEventListener("click", function(event) {
       event.preventDefault();
-    popup.classList.remove("modal-show");
+      popup.classList.remove("modal-show"); //удалить класс .modal-show
   });
 
     close1.addEventListener("click", function(event) {
       event.preventDefault();
-    popup.classList.remove("modal-show");
+      popup.classList.remove("modal-show");//удалить класс .modal-show
+  });
+
+  var form = popup.querySelector("form");
+  var login = popup.querySelector("[name=login]");
+  var password = popup.querySelector("[name=password]");
+    form.addEventListener("submit", function() { //поиск собыитя submit
+    if (!login.value || !password.value) { // не введен логин или пароль
+      event.preventDefault(); // submit не отправится
+      console.log("вести логин и пароль")
+    }
+
   });
   </script>
 </body>

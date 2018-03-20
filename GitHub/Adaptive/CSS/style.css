@@ -332,18 +332,11 @@ input[type=password] {
 
 /* добавление иконок в форму */
 .container-form i {
-  position: relative;
-  top: 40px;
-  left: 320px;
+
   font-size: 16px;
 }
 
-.container-form i:nth-child(2) {
-  position: relative;
-  top: 40px;
-  left: 320px;
-  font-size: 16px;
-}
+
 
 /* Кнопка "логин"*/
 button.btn-login-form {
